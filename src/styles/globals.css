@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .public-DraftStyleDefault-block.public-DraftStyleDefault-ltr {
+  text-align:center;
+} */
+
+/* .ql-toolbar {
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  background-color: #f7fafc;
+} */
+
+.quill {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.ql-toolbar{
+  border: none !important;
+  order: 2 !important;
+}
+
+.ql-container
+{
+  order: 1;
+  border: none !important;
+}
