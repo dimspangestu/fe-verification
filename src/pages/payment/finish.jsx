@@ -1,18 +1,9 @@
-// pages/payment/finish.jsx  (Next.js Pages Router)
-// atau: app/payment/finish/page.jsx (App Router — lihat catatan di bawah)
-//
-// Midtrans akan redirect ke URL ini dengan query params:
-//   ?order_id=XXX&status_code=200&transaction_status=settlement
-//
-// Untuk App Router, ganti `useRouter` & `useEffect` + searchParams hook (lihat komentar inline)
-
+// pages/payment/finish.jsx — Next.js Pages Router
 "use client";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router"; // App Router: "next/navigation"
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
-
-// ─── Helpers ─────────────────────────────────────────────────────────────────
 
 function resolveStatus(transactionStatus, statusCode) {
   if (!transactionStatus) return "loading";
@@ -75,24 +66,17 @@ const STATUS_CONFIG = {
   },
 };
 
-const BRAND = {
-  primary: "#0B2A3A",
-  accent: "#12B981",
-  soft: "#F3F7FA",
-};
-
-// ─── Component ───────────────────────────────────────────────────────────────
+const BRAND = { primary: "#0B2A3A", accent: "#12B981", soft: "#F3F7FA" };
 
 export default function PaymentFinishPage() {
-  // Pages Router: useRouter().query
-  // App Router: const sp = useSearchParams(); sp.get("order_id") dll
   const router = useRouter();
-  const { order_id, transaction_status, status_code, fraud_status } = router.query;
-
   const [visible, setVisible] = useState(false);
 
+  // ✅ Tunggu router.isReady — di Pages Router, query kosong saat SSR pertama
+  const { order_id, transaction_status, status_code, fraud_status } =
+    router.isReady ? router.query : {};
+
   useEffect(() => {
-    // Trigger mount animation setelah render
     const t = setTimeout(() => setVisible(true), 60);
     return () => clearTimeout(t);
   }, []);
@@ -104,12 +88,13 @@ export default function PaymentFinishPage() {
   const isFailed = ["failed", "fraud"].includes(status);
   const isPending = status === "pending";
 
+  // ✅ Title sebagai string biasa — tidak pakai expression/array
+  const pageTitle = "Status Pembayaran — FondoFund";
+
   return (
     <>
       <Head>
-        <title>
-          {cfg.title} — FondoFund
-        </title>
+        <title>{pageTitle}</title>
         <meta name="robots" content="noindex" />
       </Head>
 
@@ -125,7 +110,6 @@ export default function PaymentFinishPage() {
           fontFamily: "'DM Sans', sans-serif",
         }}
       >
-        {/* Card */}
         <div
           style={{
             background: "#fff",
@@ -248,7 +232,6 @@ export default function PaymentFinishPage() {
                 </Link>
               </>
             )}
-
             {isPending && (
               <>
                 <Link href="/dashboard/transactions" legacyBehavior>
@@ -263,13 +246,10 @@ export default function PaymentFinishPage() {
                 </Link>
               </>
             )}
-
             {isFailed && (
               <>
                 <Link href="/listing" legacyBehavior>
-                  <a style={btnStyle(BRAND.accent, "#fff")}>
-                    Coba lagi
-                  </a>
+                  <a style={btnStyle(BRAND.accent, "#fff")}>Coba lagi</a>
                 </Link>
                 <Link href="/dashboard/transactions" legacyBehavior>
                   <a style={btnStyle("transparent", BRAND.primary, true)}>
@@ -278,7 +258,6 @@ export default function PaymentFinishPage() {
                 </Link>
               </>
             )}
-
             {status === "unknown" && (
               <Link href="/dashboard/transactions" legacyBehavior>
                 <a style={btnStyle(BRAND.primary, "#fff")}>
@@ -289,7 +268,6 @@ export default function PaymentFinishPage() {
           </div>
         </div>
 
-        {/* Footer note */}
         <p
           style={{
             marginTop: 20,
@@ -312,8 +290,6 @@ export default function PaymentFinishPage() {
     </>
   );
 }
-
-// ─── Sub-components ──────────────────────────────────────────────────────────
 
 function DetailRow({ label, value, mono, warn }) {
   return (
@@ -359,7 +335,7 @@ function btnStyle(bg, color, outline = false) {
     cursor: "pointer",
     background: bg,
     color,
-    border: outline ? `1.5px solid rgba(11,42,58,0.15)` : "none",
+    border: outline ? "1.5px solid rgba(11,42,58,0.15)" : "none",
     transition: "opacity 0.15s",
   };
 }
