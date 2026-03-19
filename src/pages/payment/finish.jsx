@@ -220,14 +220,9 @@ export default function PaymentFinishPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             {isSuccess && (
               <>
-                <Link href="/dashboard/portfolio" legacyBehavior>
+                <Link href="/investor/fundings" legacyBehavior>
                   <a style={btnStyle(BRAND.primary, "#fff")}>
-                    Lihat portofolio saya →
-                  </a>
-                </Link>
-                <Link href="/listing" legacyBehavior>
-                  <a style={btnStyle("transparent", BRAND.primary, true)}>
-                    Jelajahi listing lain
+                    Lihat List Transaksi →
                   </a>
                 </Link>
               </>
