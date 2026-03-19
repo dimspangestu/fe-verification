@@ -492,8 +492,35 @@ export default function InvestorProjectsPage() {
       const res  = await authFetch(`/investor/fundings/${fundingDraft.funding_id}/checkout`, { method: "POST" });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data?.detail || "Gagal lanjut ke pembayaran");
-      if (data?.redirect_url) { window.location.href = data.redirect_url; return; }
-      if (data?.token)        { alert(`Snap token: ${data.token}`); return; }
+
+      const snapToken   = data?.token;
+      const redirectUrl = data?.redirect_url;
+
+      // ✅ Prioritas: Snap popup pakai token
+      if (snapToken && typeof window.snap !== "undefined") {
+        window.snap.pay(snapToken, {
+          onSuccess: (result) => {
+            window.location.href = `/payment/finish?order_id=${result.order_id}&transaction_status=${result.transaction_status}&status_code=${result.status_code}`;
+          },
+          onPending: (result) => {
+            window.location.href = `/payment/finish?order_id=${result.order_id}&transaction_status=pending&status_code=${result.status_code}`;
+          },
+          onError: (result) => {
+            window.location.href = `/payment/finish?order_id=${result.order_id}&transaction_status=failure&status_code=${result.status_code}`;
+          },
+          onClose: () => {
+            window.location.href = `/payment/finish?transaction_status=cancel`;
+          },
+        });
+        return;
+      }
+
+      // Fallback: redirect_url kalau Snap.js belum load
+      if (redirectUrl) {
+        window.location.href = redirectUrl;
+        return;
+      }
+
       throw new Error("Redirect pembayaran tidak tersedia.");
     } catch (e) {
       setPreparingError(e?.message || "Gagal lanjut ke pembayaran");
