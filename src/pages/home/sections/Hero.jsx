@@ -51,10 +51,10 @@ export default function Hero({ brand, stats }) {
               agar investor lebih aman untuk mendanai.
             </h1>
 
-            <p className="mt-5 text-base md:text-lg leading-relaxed text-slate-600 font-semibold">
+            {/* <p className="mt-5 text-base md:text-lg leading-relaxed text-slate-600 font-semibold">
               Alur bisnisnya: Customer submit data & dokumen → FondoFund lakukan identity check, business review,
               risk assessment → hasil verifikasi menentukan listing layak didanai atau tidak.
-            </p>
+            </p> */}
 
             <div className="mt-7 flex flex-col sm:flex-row gap-3">
               <a
@@ -97,13 +97,13 @@ export default function Hero({ brand, stats }) {
               <div className="p-6 md:p-8">
                 <div className="text-sm font-extrabold text-slate-600">Ringkasan Alur</div>
                 <div className="mt-3 text-2xl md:text-3xl font-black text-slate-900 leading-tight">
-                  Customer → FondoFund Verifikator → Investor
+                  Customer → FondoFund → Investor
                 </div>
 
                 <div className="mt-6 grid grid-cols-1 gap-3">
                   {[
                     { t: "Customer submit profil & dokumen", s: "KTP, selfie, legalitas, laporan usaha" },
-                    { t: "FondoFund verifikasi & scoring", s: "Identity check, business review, risk assessment" },
+                    { t: "FondoFund verifikasi & scoring", s: "Verifikasi Objek Investasi" },
                     { t: "Investor mendanai listing approved", s: "Hanya yang layak didanai ditampilkan" },
                   ].map((x) => (
                     <div key={x.t} className="rounded-2xl border border-black/10 bg-slate-50 p-4">

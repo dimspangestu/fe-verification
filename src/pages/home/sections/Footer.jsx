@@ -12,12 +12,6 @@ export default function Footer({ brand }) {
             <div className="text-lg font-black text-slate-900">
               {brand.name}
             </div>
-
-            <p className="mt-3 text-sm text-slate-600 font-semibold">
-              Plataforma verifikasi penerima dana untuk memastikan investor
-              hanya mendanai listing yang telah melewati proses KYC dan risk
-              assessment.
-            </p>
           </div>
 
           <div>

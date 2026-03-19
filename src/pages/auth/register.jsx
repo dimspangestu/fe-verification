@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 const ROLES = [
   { value: "penerima_dana", label: "Penerima Dana" },
   { value: "investor", label: "Investor" },
-  { value: "admin", label: "Admin" },
+  // { value: "admin", label: "Admin" },
 ];
 
 const API_BASE =
@@ -90,7 +90,7 @@ export default function RegisterPage() {
           <div style={styles.badge}>AUTH</div>
           <h1 style={styles.title}>Register</h1>
           <p style={styles.subtitle}>
-            Buat akun baru (penerima dana / investor / admin).
+            Buat akun baru (penerima dana / investor).
           </p>
         </div>
 
@@ -171,12 +171,6 @@ export default function RegisterPage() {
               <Link href="/auth/login" style={styles.link}>
                 Login
               </Link>
-            </div>
-
-            <div style={styles.note}>
-              API: <b>{API_BASE}</b>
-              <br />
-              Header: <b>key</b> (wajib)
             </div>
           </div>
         </form>
