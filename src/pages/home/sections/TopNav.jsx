@@ -1,7 +1,7 @@
 // pages/home/sections/TopNav.jsx
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-
+import logo from "../../../assets/newlogo.png";
 function cn(...a) {
   return a.filter(Boolean).join(" ");
 }
@@ -35,16 +35,11 @@ export default function TopNav({ brand }) {
       <div className="mx-auto max-w-[1200px] px-5">
         <div className="h-[74px] flex items-center justify-between gap-3">
           <Link href="/" className="flex items-center gap-3">
-            <div
-              className="h-10 w-10 rounded-2xl grid place-items-center text-white font-black"
-              style={{ background: `linear-gradient(135deg, ${brand.primary}, ${brand.accent})` }}
-            >
-              F
-            </div>
-            <div className="leading-tight">
-              <div className="font-black text-[15px] tracking-tight">{brand.name}</div>
-              <div className="text-xs font-semibold text-slate-500">{brand.domain}</div>
-            </div>
+             <img
+              src={logo.src}
+              alt={brand.name}
+              className="h-10 w-auto"
+            />
           </Link>
 
           <nav className="hidden md:flex items-center gap-7 text-sm font-extrabold text-slate-600">

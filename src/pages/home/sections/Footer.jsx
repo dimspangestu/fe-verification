@@ -1,5 +1,6 @@
-// pages/home/sections/Footer.jsx
 import React from "react";
+import logo from "../../../assets/newlogo.png";
+import Link from "next/link";
 
 export default function Footer({ brand }) {
   const year = new Date().getFullYear();
@@ -9,9 +10,13 @@ export default function Footer({ brand }) {
       <div className="mx-auto max-w-[1200px] px-5 py-10">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <div className="text-lg font-black text-slate-900">
-              {brand.name}
-            </div>
+            <Link href="/" className="flex items-center gap-3">
+             <img
+              src={logo.src}
+              alt={brand.name}
+              className="h-10 w-auto"
+            />
+          </Link>
           </div>
 
           <div>
