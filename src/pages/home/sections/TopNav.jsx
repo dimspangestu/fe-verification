@@ -45,17 +45,11 @@ export default function TopNav({ brand }) {
           <nav className="hidden md:flex items-center gap-7 text-sm font-extrabold text-slate-600">
             <a className="hover:text-slate-900" href="#alur">Alur Bisnis</a>
             <a className="hover:text-slate-900" href="#fitur">Fitur</a>
-            <a className="hover:text-slate-900" href="#paket">Paket</a>
+            <a className="hover:text-slate-900" href="#testimoni">Testimoni</a>
             <a className="hover:text-slate-900" href="#faq">FAQ</a>
           </nav>
 
           <div className="flex items-center gap-2">
-            <a
-              href="#demo"
-              className="hidden sm:inline-flex items-center rounded-2xl border border-black/10 bg-white px-4 py-2 text-sm font-extrabold text-slate-700 hover:shadow-sm"
-            >
-              Request Demo
-            </a>
             <a
               href="/auth/login"
               className="inline-flex items-center gap-2 rounded-2xl px-4 py-2 text-sm font-extrabold text-white hover:opacity-95"

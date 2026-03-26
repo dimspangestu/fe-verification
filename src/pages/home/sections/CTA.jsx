@@ -19,9 +19,6 @@ export default function CTA({ brand }) {
           </p>
 
           <div className="mt-8 flex justify-center gap-3 flex-wrap">
-            <button className="rounded-2xl bg-white text-slate-900 px-6 py-3 text-sm font-extrabold">
-              Request Demo
-            </button>
 
             <button className="rounded-2xl border border-white/40 px-6 py-3 text-sm font-extrabold">
               Hubungi Kami
