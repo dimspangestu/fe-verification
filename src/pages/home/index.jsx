@@ -8,7 +8,6 @@ import FlowPreview from "./sections/FlowPreview";
 import Features    from "./sections/Features";
 import WhyFondoFund from "./sections/WhyFondoFund";
 import FAQ         from "./sections/FAQ";
-import CTA         from "./sections/CTA";
 import Footer      from "./sections/Footer";
 
 const BRAND = {
@@ -73,7 +72,6 @@ export default function HomeSection() {
         <Features brand={BRAND} features={features} />
         <WhyFondoFund brand={BRAND} />
         <FAQ brand={BRAND} items={faq} />
-        <CTA brand={BRAND} />
         <Footer brand={BRAND} />
       </div>
     </>

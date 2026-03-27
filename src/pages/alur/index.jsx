@@ -1,9 +1,9 @@
 // pages/alur.jsx
 import React, { useState } from "react";
 import Link from "next/link";
-import TopNav from "../home/sections/TopNav";
-import Footer from "../home/sections/Footer";
-import Hero from "../home/sections/Hero"
+import TopNav from "./home/sections/TopNav";
+import Footer from "./home/sections/Footer";
+
 const BRAND = {
   name:    "FondoFund",
   domain:  "fondofund.com",
@@ -16,7 +16,7 @@ const BRAND = {
 const FLOWS = [
   {
     id: "vendor",
-    role: "investee",
+    role: "Penerima Dana",
     tagline: "Submit & Verifikasi",
     color: "emerald",
     icon: (
@@ -48,7 +48,13 @@ const FLOWS = [
         n: "04",
         title: "Submit Proposal Proyek",
         desc: "Setelah KYC verified, submit proposal proyek. Sistem akan generate PDF draft perjanjian vendor untuk ditandatangani dan di-upload kembali di halaman Status.",
-        docs: ["Surat Penunjukan + SPK (PDF)", "RAB / Rencana Anggaran Biaya (PDF)", "Dokumen pendukung (opsional, PDF)"],
+        docs: [
+          "Surat Penunjukan Penyedia *",
+          "SPK (Surat Perintah Kerja) *",
+          "RAB *",
+          "Bank Garansi *",
+          "Document Contract (opsional)",
+        ],
       },
       {
         n: "05",
@@ -59,7 +65,7 @@ const FLOWS = [
       {
         n: "06",
         title: "Pantau Pendanaan & Cicilan",
-        desc: "Lacak progress pendanaan, jumlah investor aktif, dan status pembayaran cicilan return dari dashboard investee.",
+        desc: "Lacak progress pendanaan, jumlah investor aktif, dan status pembayaran cicilan return dari dashboard Penerima Dana.",
         docs: [],
       },
     ],
@@ -78,8 +84,8 @@ const FLOWS = [
     steps: [
       {
         n: "01",
-        title: "Review KYC investee",
-        desc: "Admin membuka dashboard KYC Vendor, memeriksa dokumen yang diupload, dan memverifikasi kelayakan bisnis investee.",
+        title: "Review KYC Penerima Dana",
+        desc: "Admin membuka dashboard KYC Vendor, memeriksa dokumen yang diupload, dan memverifikasi kelayakan bisnis penerima dana.",
         docs: [],
       },
       {
@@ -218,11 +224,19 @@ export default function AlurPage() {
   return (
     <>
       <TopNav brand={BRAND} />
-      <Hero brand={BRAND}/>
+
       <main className="min-h-screen" style={{ background: "linear-gradient(180deg, #f0fdf4 0%, #ffffff 60%)" }}>
 
         {/* Page header */}
         <div className="mx-auto max-w-[1200px] px-5 pt-16 pb-8 md:pt-24">
+          <Link href="/#alur"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-400 hover:text-green-600 transition mb-6">
+            <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none">
+              <path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            Kembali ke Beranda
+          </Link>
+
           <span className="inline-flex items-center gap-2 rounded-full border border-green-200 bg-green-50 px-3 py-1 text-xs font-extrabold text-green-800">
             <span className="h-1.5 w-1.5 rounded-full bg-green-500" />
             Alur Platform Lengkap
@@ -232,7 +246,7 @@ export default function AlurPage() {
             <span className="text-green-600">bekerja</span>
           </h1>
           <p className="mt-4 text-base md:text-lg font-semibold text-slate-500 leading-relaxed max-w-2xl">
-            Detail lengkap setiap langkah untuk investee, tim Fondofund, dan investor —
+            Detail lengkap setiap langkah untuk penerima dana, tim Fondofund, dan investor —
             mulai dari pendaftaran hingga pencairan return.
           </p>
         </div>
