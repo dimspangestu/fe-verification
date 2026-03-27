@@ -51,14 +51,14 @@ export default function Footer({ brand }) {
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"/>
                   <path d="m22 6-10 7L2 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
                 </svg>
-                fondofundofc@gmail.com
+                support.fondofund@gmail.com
               </li>
               <li className="flex items-center gap-2 text-sm font-semibold text-green-200">
                 <svg className="h-4 w-4 shrink-0 text-green-400" fill="none" viewBox="0 0 24 24">
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" strokeWidth="1.8"/>
                   <circle cx="12" cy="9" r="2.5" stroke="currentColor" strokeWidth="1.8"/>
                 </svg>
-                Jakarta, Indonesia
+                Depok, Jawa Barat
               </li>
             </ul>
           </div>
