@@ -7,7 +7,7 @@ const TESTIMONIALS = [
     role: "Direktur Utama",
     company: "PT Karya Maju Bersama",
     type: "vendor",
-    typeLabel: "Penerima Dana",
+    typeLabel: "investee",
     avatar: "BH",
     rating: 5,
     text: "Proses KYC yang saya bayangkan bakal ribet ternyata straightforward. Upload dokumen, tunggu review, dan dalam 1 hari kerja sudah verified. Sekarang proyek saya sudah bisa didanai investor.",
@@ -31,10 +31,10 @@ const TESTIMONIALS = [
     role: "CEO & Founder",
     company: "CV Infrastruktur Nusantara",
     type: "vendor",
-    typeLabel: "Penerima Dana",
+    typeLabel: "investee",
     avatar: "AF",
     rating: 5,
-    text: "Dashboard penerima dana sangat informatif. Saya bisa pantau berapa investor yang sudah masuk, progress funding, dan status proyek secara real-time. Transparansinya bikin investor lebih percaya.",
+    text: "Dashboard investee sangat informatif. Saya bisa pantau berapa investor yang sudah masuk, progress funding, dan status proyek secara real-time. Transparansinya bikin investor lebih percaya.",
     highlight: "transparansi bikin investor percaya",
   },
   {
@@ -55,7 +55,7 @@ const TESTIMONIALS = [
     role: "Direktur Keuangan",
     company: "PT Properti Sukses Indonesia",
     type: "vendor",
-    typeLabel: "Penerima Dana",
+    typeLabel: "investee",
     avatar: "DP",
     rating: 5,
     text: "Notifikasi email langsung masuk begitu status KYC berubah. Tidak perlu bolak-balik cek dashboard. Tim admin Fondofund juga responsif dan memberikan catatan yang jelas kalau ada dokumen yang perlu diperbaiki.",
@@ -212,7 +212,7 @@ export default function Testimonials({ brand }) {
               Testimoni
             </span>
             <h2 className="text-3xl md:text-4xl font-black tracking-tight text-slate-900 leading-tight">
-              Dipercaya penerima dana{" "}
+              Dipercaya investee{" "}
               <span className="text-green-600">dan investor.</span>
             </h2>
             <p className="mt-3 text-sm font-semibold text-slate-500 leading-relaxed">

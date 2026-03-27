@@ -178,7 +178,7 @@ export default function AdminTailLayout({ title = "Dashboard", children }) {
                 Verifikasi Data
               </div>
               <div className="mt-1 text-xs text-slate-500">
-                Cek kelengkapan data investor & penerima dana sebelum diproses.
+                Cek kelengkapan data investor & investee sebelum diproses.
               </div>
               <button
                 className="mt-3 w-full rounded-xl bg-slate-900 px-3 py-2 text-xs font-extrabold text-white hover:bg-slate-800"

@@ -5,7 +5,7 @@ import Link from "next/link";
 const STEPS = [
   {
     num: "01",
-    role: "Penerima Dana",
+    role: "investee",
     title: "Daftar & Submit Dokumen",
     desc: "Lengkapi profil, upload KYC, dan ajukan proposal proyek.",
     color: "emerald",

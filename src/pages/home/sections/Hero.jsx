@@ -44,11 +44,6 @@ export default function Hero() {
                 <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </Link>
-            <Link
-              href="/auth/login"
-              className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/20 bg-white/10 px-6 py-3.5 text-sm font-extrabold text-white backdrop-blur-sm transition hover:bg-white/20 active:scale-95">
-              Masuk ke Akun
-            </Link>
           </div>
 
           <div className="mt-12 flex flex-wrap items-center gap-6 border-t border-white/10 pt-8">

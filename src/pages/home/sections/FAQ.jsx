@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const FAQ_EXTENDED = [
   {
     q: "FondoFund ini P2P lending atau verifikator?",
-    a: "FondoFund berperan sebagai verifikator/jembatan: memverifikasi penerima dana dan membantu listing yang siap ditampilkan ke investor. Kami memastikan setiap pihak sudah melewati KYC sebelum bertransaksi.",
+    a: "FondoFund berperan sebagai verifikator/jembatan: memverifikasi investee dana dan membantu listing yang siap ditampilkan ke investor. Kami memastikan setiap pihak sudah melewati KYC sebelum bertransaksi.",
     cat: "Umum",
   },
   {

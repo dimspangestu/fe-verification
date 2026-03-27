@@ -16,7 +16,7 @@ const BRAND = {
 const FLOWS = [
   {
     id: "vendor",
-    role: "Penerima Dana",
+    role: "investee",
     tagline: "Submit & Verifikasi",
     color: "emerald",
     icon: (
@@ -59,7 +59,7 @@ const FLOWS = [
       {
         n: "06",
         title: "Pantau Pendanaan & Cicilan",
-        desc: "Lacak progress pendanaan, jumlah investor aktif, dan status pembayaran cicilan return dari dashboard Penerima Dana.",
+        desc: "Lacak progress pendanaan, jumlah investor aktif, dan status pembayaran cicilan return dari dashboard investee.",
         docs: [],
       },
     ],
@@ -78,8 +78,8 @@ const FLOWS = [
     steps: [
       {
         n: "01",
-        title: "Review KYC Penerima Dana",
-        desc: "Admin membuka dashboard KYC Vendor, memeriksa dokumen yang diupload, dan memverifikasi kelayakan bisnis penerima dana.",
+        title: "Review KYC investee",
+        desc: "Admin membuka dashboard KYC Vendor, memeriksa dokumen yang diupload, dan memverifikasi kelayakan bisnis investee.",
         docs: [],
       },
       {
@@ -232,7 +232,7 @@ export default function AlurPage() {
             <span className="text-green-600">bekerja</span>
           </h1>
           <p className="mt-4 text-base md:text-lg font-semibold text-slate-500 leading-relaxed max-w-2xl">
-            Detail lengkap setiap langkah untuk penerima dana, tim Fondofund, dan investor —
+            Detail lengkap setiap langkah untuk investee, tim Fondofund, dan investor —
             mulai dari pendaftaran hingga pencairan return.
           </p>
         </div>

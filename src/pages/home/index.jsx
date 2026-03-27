@@ -37,7 +37,7 @@ export default function HomeSection() {
     () => [
       {
         q: "FondoFund ini P2P lending atau verifikator?",
-        a: "FondoFund berperan sebagai verifikator/jembatan: memverifikasi penerima dana dan membantu listing yang siap ditampilkan ke investor.",
+        a: "FondoFund berperan sebagai verifikator/jembatan: memverifikasi investee dan membantu listing yang siap ditampilkan ke investor.",
       },
       {
         q: "Apa yang diverifikasi?",

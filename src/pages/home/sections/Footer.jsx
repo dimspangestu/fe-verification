@@ -17,7 +17,7 @@ export default function Footer({ brand }) {
               <img src={logo.src} alt={brand.name} className="h-10 w-auto brightness-0 invert" />
             </Link>
             <p className="mt-4 text-sm font-semibold text-green-200 leading-relaxed max-w-xs">
-              Platform verifikasi yang menghubungkan penerima dana dengan investor secara transparan dan teraudit.
+              Platform verifikasi yang menghubungkan investee dengan investor secara transparan dan akuntabel.
             </p>
           </div>
 
