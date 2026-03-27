@@ -6,11 +6,11 @@ import TopNav      from "./sections/TopNav";
 import Hero        from "./sections/Hero";
 import FlowPreview from "./sections/FlowPreview";
 import Features    from "./sections/Features";
-// import WhyFondoFund from "./sections/WhyFondoFund";
+import WhyFondoFund from "./sections/WhyFondoFund";
 import FAQ         from "./sections/FAQ";
-// import CTA         from "./sections/CTA";
+import CTA         from "./sections/CTA";
 import Footer      from "./sections/Footer";
-import Testimonials from "./sections/Testimonial";
+
 const BRAND = {
   name:    "FondoFund",
   domain:  "fondofund.com",
@@ -37,7 +37,7 @@ export default function HomeSection() {
     () => [
       {
         q: "FondoFund ini P2P lending atau verifikator?",
-        a: "FondoFund berperan sebagai verifikator/jembatan: memverifikasi investee dan membantu listing yang siap ditampilkan ke investor.",
+        a: "FondoFund berperan sebagai verifikator/jembatan: memverifikasi penerima dana dan membantu listing yang siap ditampilkan ke investor.",
       },
       {
         q: "Apa yang diverifikasi?",
@@ -58,7 +58,7 @@ export default function HomeSection() {
   return (
     <>
       <Head>
-        <title>{BRAND.domain} — Verifikator Penerima Dana & Investor</title>
+        <title>{`${BRAND.domain} — Verifikator Penerima Dana & Investor`}</title>
         <meta
           name="description"
           content="FondoFund adalah verifikator (jembatan) antara penerima dana dan investor: identity check, business review, risk assessment, dan listing yang layak didanai."
@@ -71,10 +71,9 @@ export default function HomeSection() {
         <Hero />
         <FlowPreview />
         <Features brand={BRAND} features={features} />
-        <Testimonials brand={BRAND} features={features} />
-        {/* <WhyFondoFund brand={BRAND} /> */}
+        <WhyFondoFund brand={BRAND} />
         <FAQ brand={BRAND} items={faq} />
-        {/* <CTA brand={BRAND} /> */}
+        <CTA brand={BRAND} />
         <Footer brand={BRAND} />
       </div>
     </>
