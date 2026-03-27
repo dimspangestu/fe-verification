@@ -1,8 +1,8 @@
 // pages/alur.jsx
 import React, { useState } from "react";
 import Link from "next/link";
-import TopNav from "./home/sections/TopNav";
-import Footer from "./home/sections/Footer";
+import TopNav from "../home/sections/TopNav";
+import Footer from "../home/sections/Footer";
 
 const BRAND = {
   name:    "FondoFund",
