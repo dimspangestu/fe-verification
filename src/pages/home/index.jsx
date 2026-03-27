@@ -57,7 +57,7 @@ export default function HomeSection() {
   return (
     <>
       <Head>
-        <title>{`${BRAND.domain} — Verifikator Penerima Dana & Investor`}</title>
+        <title>{`${BRAND.domain}`}</title>
         <meta
           name="description"
           content="FondoFund adalah verifikator (jembatan) antara penerima dana dan investor: identity check, business review, risk assessment, dan listing yang layak didanai."

@@ -12,7 +12,7 @@ export default function WhyFondoFund({ brand }) {
                 Kenapa FondoFund
               </div>
               <h3 className="mt-4 text-3xl md:text-4xl font-black text-slate-900 leading-tight">
-                Investor butuh listing yang terpercaya. Customer butuh proses yang jelas.
+                Investor butuh instrument investasi terpercaya. Customer butuh transparansi.
               </h3>
               <p className="mt-3 text-slate-600 font-semibold leading-relaxed">
                 FondoFund memastikan dua sisi bertemu di titik yang aman: verifikasi identitas, validasi bisnis, dan
